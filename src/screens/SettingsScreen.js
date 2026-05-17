@@ -24,13 +24,25 @@ export default function SettingsScreen({ navigation }) {
     if (!isNaN(h)) applyHue(h);
   };
 
-  const changeFolder = async () => {
-    try {
-      const result = await StorageAccessFramework.requestDirectoryPermissionsAsync();
-      if (result.granted) await setSaveFolder(result.directoryUri);
-    } catch (e) {
-      Alert.alert('Error', e.message);
-    }
+  const changeFolder = () => {
+    Alert.alert(
+      'Choose save folder',
+      'Select the folder that directly contains Mii.sav, Player.sav, and the Ugc/ subfolder.\n\nNavigate into that folder so those files are visible, then tap "Use this folder".',
+      [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Open picker',
+          onPress: async () => {
+            try {
+              const result = await StorageAccessFramework.requestDirectoryPermissionsAsync();
+              if (result.granted) await setSaveFolder(result.directoryUri);
+            } catch (e) {
+              Alert.alert('Error', e.message);
+            }
+          },
+        },
+      ]
+    );
   };
 
   const displayPath = saveFolderUri

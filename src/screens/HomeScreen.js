@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { useApp } from '../context/AppContext';
 import { useNavigation } from '@react-navigation/native';
@@ -42,9 +42,13 @@ export default function HomeScreen() {
 
       {/* Hero */}
       <View style={s.hero}>
-        <Text style={s.heroEmoji}>🏝️</Text>
+        <Image
+          source={require('../../assets/icon.png')}
+          style={s.heroIcon}
+          resizeMode="cover"
+        />
         <View>
-          <Text style={s.heroTitle}>TomoPhonEdit</Text>
+          <Text style={s.heroTitle}>DreamEditor</Text>
           <Text style={s.heroSub}>Tomodachi Life · Living the Dream</Text>
         </View>
       </View>
@@ -113,7 +117,7 @@ const makeStyles = (c, sp) => StyleSheet.create({
     gap: sp.md, marginBottom: sp.lg,
     paddingTop: sp.md,
   },
-  heroEmoji: { fontSize: 44 },
+  heroIcon: { width: 52, height: 52, borderRadius: 14, borderWidth: 1, borderColor: c.outline },
   heroTitle: { fontSize: 22, fontWeight: '700', color: c.textPrimary },
   heroSub:   { fontSize: 13, color: c.textSecondary, marginTop: 2 },
 

@@ -41,11 +41,10 @@ export const PERSONALITY_FIELDS = [
 // ─── Gameplay stat hashes (per-slot in Mii.sav) ─────────────────────────────
 
 export const STAT_FIELDS = [
-  { key: 'hunger',   label: 'Hunger',    hash: 'EF25B456' }, // EatFullness
-  { key: 'bond',     label: 'Bond',      hash: 'D0882636' }, // BondInfo.Meter
-  { key: 'stress',   label: 'Stress',    hash: '197237E7' }, // SatisfyInfo.Meter
-  { key: 'mood',     label: 'Mood',      hash: '176C29EB' }, // Feeling.Type enum
-  { key: 'miimoney', label: 'Mii Money', hash: 'F334FD2E' }, // Mii pocket money
+  { key: 'hunger', label: 'Hunger', hash: 'EF25B456' }, // EatFullness
+  { key: 'bond',   label: 'Bond',   hash: 'D0882636' }, // BondInfo.Meter
+  { key: 'stress', label: 'Stress', hash: '197237E7' }, // SatisfyInfo.Meter
+  { key: 'mood',   label: 'Mood',   hash: '176C29EB' }, // Feeling.Type enum
 ];
 
 // ─── Player.sav field hashes ─────────────────────────────────────────────────
