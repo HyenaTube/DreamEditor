@@ -12,11 +12,20 @@ Edit Mii stats, import/export Miis, swap item textures, tweak your wallet — al
 
 ## Features
 
+### Basically most if not all features of the ShareMii and LivingTheDreamToolkit.
+
 ### Mii Manager
 - Import `.ltd` Mii files into any of the 70 Mii slots
 - Export individual Miis as `.ltd` files to any folder
 - Export all Miis at once with one tap
 - View and edit per-Mii stats directly from the Mii list
+  
+- ### UGC Browser
+- Browse all UGC item slots (Food, Clothing, Goods, Interior, Exterior, Objects, Landscaping)
+- Import custom `.ltd` item files into the next free slot
+- Edit existing items by importing an image. (also possible to export)
+- Updates `Player.sav` item name and metadata on import (when available)
+
 
 ### Mii Stats Editor
 Edit the following fields for any initialized Mii:
@@ -31,21 +40,14 @@ All values are raw `uint32` reads from `Mii.sav`. A backup is created automatica
 
 ### Save Editor
 - View all active Miis and edit their levels in one place
-- Edit your **player wallet**: G-Coins (gold) and Silver Coins
 - Jump to the full stats editor for any individual Mii
-- Reads both `Mii.sav` and `Player.sav`
-
-### UGC Browser
-- Browse all UGC item slots (Food, Clothing, Goods, Interior, Exterior, Objects, Landscaping)
-- Import custom `.ltd` item files into the next free slot
-- Edit existing items in a built-in hex/visual editor
-- Updates `Player.sav` item name and metadata on import (when available)
 
 ### Backups
 - Automatic backup created before every import or save operation
 - Up to 10 backup slots — oldest is removed when a new one is created
 - Restore any backup with one tap
 - Manual restore from the Backups screen in Settings
+- *HOWEVER, ITS ALWAYS BETTER TO MAKE A MANUAL BACKUP!!* (better safe than sorry)
 
 ### Theming
 - 10 preset accent colors or enter any custom hue (0–359)
@@ -102,6 +104,7 @@ Hash values were sourced from [alexislours/ltd-save-editor](https://github.com/a
 ## Contributing
 
 Pull requests welcome. If you find a hash value for a field not yet supported, open an issue or PR and include how you verified it.
+If you want anything added i'll take a look at it too.
 
 ---
 
